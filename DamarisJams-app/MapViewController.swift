@@ -7,21 +7,29 @@
 //
 
 import UIKit
+import MapKit
+
 
 class MapViewController: UIViewController {
 
+    @IBOutlet weak var event_location: MKMapView!
+    // set initial location in Honolulu
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let initialLocation = CLLocation(latitude: 40.8422, longitude: 74.0024)
+        
+        centerMapOnLocation(location: initialLocation)
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
+    let regionRadius: CLLocationDistance = 1000
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+                                                                  regionRadius * 2.0, regionRadius * 2.0)
+        event_location.setRegion(coordinateRegion, animated: true)
+    }
     /*
     // MARK: - Navigation
 
