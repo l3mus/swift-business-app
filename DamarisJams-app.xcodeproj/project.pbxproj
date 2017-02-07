@@ -14,6 +14,7 @@
 		90A8B7BD1E4A471E003CF687 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90A8B7BB1E4A471E003CF687 /* LaunchScreen.storyboard */; };
 		90A8B7C81E4A471E003CF687 /* DamarisJams_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8B7C71E4A471E003CF687 /* DamarisJams_appTests.swift */; };
 		90A8B7D31E4A471E003CF687 /* DamarisJams_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8B7D21E4A471E003CF687 /* DamarisJams_appUITests.swift */; };
+		90ADAC001E4A7BD100DA35DC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ADABFF1E4A7BD100DA35DC /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		90A8B7CE1E4A471E003CF687 /* DamarisJams-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DamarisJams-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A8B7D21E4A471E003CF687 /* DamarisJams_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamarisJams_appUITests.swift; sourceTree = "<group>"; };
 		90A8B7D41E4A471E003CF687 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90ADABFF1E4A7BD100DA35DC /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				90A8B7B21E4A471E003CF687 /* AppDelegate.swift */,
 				90A8B7B41E4A471E003CF687 /* ViewController.swift */,
 				90A8B7B61E4A471E003CF687 /* Main.storyboard */,
+				90ADABFF1E4A7BD100DA35DC /* MapViewController.swift */,
 				90A8B7B91E4A471E003CF687 /* Assets.xcassets */,
 				90A8B7BB1E4A471E003CF687 /* LaunchScreen.storyboard */,
 				90A8B7BE1E4A471E003CF687 /* Info.plist */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90A8B7B51E4A471E003CF687 /* ViewController.swift in Sources */,
+				90ADAC001E4A7BD100DA35DC /* MapViewController.swift in Sources */,
 				90A8B7B31E4A471E003CF687 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +421,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "unlv.DamarisJams-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -429,6 +434,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "unlv.DamarisJams-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -505,6 +511,7 @@
 				90A8B7D91E4A471E003CF687 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90A8B7DA1E4A471E003CF687 /* Build configuration list for PBXNativeTarget "DamarisJams-appTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +520,7 @@
 				90A8B7DC1E4A471E003CF687 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90A8B7DD1E4A471E003CF687 /* Build configuration list for PBXNativeTarget "DamarisJams-appUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +529,7 @@
 				90A8B7DF1E4A471E003CF687 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
