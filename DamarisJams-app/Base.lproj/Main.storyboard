@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FHx-Yg-LaC">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DamarisJams_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Home" storyboardIdentifier="Home" id="BYZ-38-t0r" customClass="ViewController" customModule="DamarisJams_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,14 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="V3B-Rm-qAM">
-                                <rect key="frame" x="37" y="358" width="346" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">My name is Damaris and it rhymes with Paris. I've been singing, writing songs, and playing guitar since I was eight years old. I have no intention of stopping. I have no idea what life has in store for me, but as long as I've got my music I know I'll be a-okay.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Damaris Jams" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sX7-hC-XUU">
                                 <rect key="frame" x="107" y="72" width="207" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -40,56 +32,76 @@
                                 <rect key="frame" x="37" y="135" width="346" height="183"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="bfy-zG-imR">
-                                <rect key="frame" x="0.0" y="699" width="414" height="37"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.94885540008544922" green="0.82655549049377441" blue="0.88629502058029175" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <segue destination="esG-ev-YV6" kind="show" id="AXO-HV-L6W"/>
-                                </connections>
-                            </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaU-bJ-1jJ">
-                                <rect key="frame" x="180" y="534" width="60" height="40"/>
+                                <rect key="frame" x="177" y="517" width="60" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94885540008544922" green="0.82655549049377441" blue="0.88629502058029175" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                 <state key="normal" title="TTS">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="speak_about:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ypi-E3-tWF"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghM-8r-jDS">
+                                <rect key="frame" x="57" y="339" width="300" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <mutableString key="text">My name is Damaris and it rhymes with Paris. I've been singing, writing songs, and playing guitar since I was eight years old. I have no intention of stopping. I have no idea what life has in store for me, but as long as I've got my music I know I'll be a-okay.</mutableString>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHZ-8u-6es">
+                                <rect key="frame" x="96" y="616" width="223" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94885540010000002" green="0.82655549049999999" blue="0.88629502059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <state key="normal" title="Webpage">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToWebpage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jgW-dt-1kl"/>
+                                    <action selector="speak_about:" destination="BYZ-38-t0r" eventType="touchUpInside" id="THy-50-ozi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99214076995849609" green="0.96439802646636963" blue="0.98431849479675293" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3G4-7T-oyw"/>
                     <connections>
-                        <outlet property="lbl_title" destination="sX7-hC-XUU" id="Q62-BI-FdJ"/>
-                        <outlet property="txt_about" destination="V3B-Rm-qAM" id="x4V-h5-q0q"/>
+                        <outlet property="lbl_about" destination="ghM-8r-jDS" id="4aK-6l-Brr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88.405797101449281" y="311.41304347826087"/>
+            <point key="canvasLocation" x="176.81159420289856" y="355.43478260869568"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="cuQ-Wd-gIK">
             <objects>
-                <viewController id="esG-ev-YV6" customClass="MapViewController" customModule="DamarisJams_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ConcertLocation" storyboardIdentifier="ConcertLocation" id="esG-ev-YV6" customClass="MapViewController" customModule="DamarisJams_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ufn-e0-6oY"/>
                         <viewControllerLayoutGuide type="bottom" id="KPO-7F-Szm"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Gt6-0x-6uU">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="ConcertLocation" id="Gt6-0x-6uU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qqu-sh-8Kt" customClass="MapV">
-                                <rect key="frame" x="20" y="28" width="374" height="279"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Concert Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9o0-9o-Yju">
+                                <rect key="frame" x="84" y="72" width="268" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="qqu-sh-8Kt">
+                                <rect key="frame" x="0.0" y="138" width="429" height="598"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.99214076995849609" green="0.96439802646636963" blue="0.98431849479675293" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
                         <outlet property="event_location" destination="qqu-sh-8Kt" id="3TW-Yr-dhu"/>
@@ -97,7 +109,119 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1r-ae-elS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="817.39130434782612" y="311.41304347826087"/>
+            <point key="canvasLocation" x="900.00000000000011" y="354.61956521739131"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="smL-HC-Emp">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" id="sTg-At-rbN" customClass="MenuViewController" customModule="DamarisJams_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XcD-0e-prf"/>
+                        <viewControllerLayoutGuide type="bottom" id="S8b-eA-dev"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qZy-Jq-Krb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17W-z1-SwN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCloseMenuClick:" destination="sTg-At-rbN" eventType="touchUpInside" id="l6R-08-VcF"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="e8i-Dd-YBp">
+                                <rect key="frame" x="0.0" y="64" width="354" height="672"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellMenu" id="izd-fk-z2e">
+                                        <rect key="frame" x="0.0" y="22" width="354" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="izd-fk-z2e" id="DrA-kj-o2t">
+                                            <rect key="frame" x="0.0" y="0.0" width="354" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UsA-cG-abi">
+                                                    <rect key="frame" x="8" y="8" width="38" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="38" id="221-Vd-iEq"/>
+                                                        <constraint firstAttribute="height" constant="38" id="AHU-ZF-gCK"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCb-qC-EPK">
+                                                    <rect key="frame" x="54" y="16" width="292" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="4dC-g2-r62"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UsA-cG-abi" firstAttribute="centerY" secondItem="DrA-kj-o2t" secondAttribute="centerY" id="BrO-zD-rgh"/>
+                                                <constraint firstAttribute="trailing" secondItem="GCb-qC-EPK" secondAttribute="trailing" constant="8" id="THI-CR-OhG"/>
+                                                <constraint firstItem="GCb-qC-EPK" firstAttribute="leading" secondItem="UsA-cG-abi" secondAttribute="trailing" constant="8" id="Vj0-ne-ry2"/>
+                                                <constraint firstItem="UsA-cG-abi" firstAttribute="leading" secondItem="DrA-kj-o2t" secondAttribute="leading" constant="8" id="cVl-dp-N4w"/>
+                                                <constraint firstItem="GCb-qC-EPK" firstAttribute="centerY" secondItem="DrA-kj-o2t" secondAttribute="centerY" id="xPY-R9-qmB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="sTg-At-rbN" id="04y-8z-8FW"/>
+                                    <outlet property="delegate" destination="sTg-At-rbN" id="ysG-T9-LDj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="e8i-Dd-YBp" secondAttribute="bottom" id="NVq-xy-dWY"/>
+                            <constraint firstItem="e8i-Dd-YBp" firstAttribute="top" secondItem="qZy-Jq-Krb" secondAttribute="top" constant="64" id="PMQ-xx-zG6"/>
+                            <constraint firstItem="17W-z1-SwN" firstAttribute="top" secondItem="qZy-Jq-Krb" secondAttribute="top" id="Q11-W8-b9I"/>
+                            <constraint firstItem="17W-z1-SwN" firstAttribute="leading" secondItem="qZy-Jq-Krb" secondAttribute="leading" id="QOn-Sx-xJn"/>
+                            <constraint firstItem="e8i-Dd-YBp" firstAttribute="leading" secondItem="qZy-Jq-Krb" secondAttribute="leading" id="Ro2-e6-Vkn"/>
+                            <constraint firstAttribute="trailing" secondItem="e8i-Dd-YBp" secondAttribute="trailing" constant="60" id="Wta-Hc-Kgj"/>
+                            <constraint firstAttribute="trailing" secondItem="17W-z1-SwN" secondAttribute="trailing" id="bbI-Op-dfh"/>
+                            <constraint firstItem="S8b-eA-dev" firstAttribute="top" secondItem="17W-z1-SwN" secondAttribute="bottom" id="gfA-rv-OMi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnCloseMenuOverlay" destination="17W-z1-SwN" id="8vd-qa-xp1"/>
+                        <outlet property="tblMenuOptions" destination="e8i-Dd-YBp" id="Ong-up-8Gk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5CT-tG-IBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-597.10144927536237" y="-295.10869565217394"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tSs-xY-CVu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FHx-Yg-LaC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="IzH-un-Nff">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.58367598679999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Gcf-zB-RI2"/>
+                        <segue destination="esG-ev-YV6" kind="show" id="fkK-cB-7b5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lwW-Tp-X6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-597" y="357"/>
         </scene>
     </scenes>
     <resources>

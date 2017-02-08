@@ -9,19 +9,25 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, UITextViewDelegate{
+class ViewController: BaseViewController, UITextViewDelegate{
 
     @IBOutlet weak var txt_about: UITextView!
     
-    @IBOutlet weak var lbl_title: UILabel!
+    @IBOutlet weak var lbl_about: UILabel!
+    
     let synthesizer = AVSpeechSynthesizer()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let gestureRecognizer = UIGestureRecognizer(target: self, action: Selector(("handleTap:")))
-        lbl_title.addGestureRecognizer(gestureRecognizer)
+        
+        self.navigationItem.title = "Home"
+        
+        self.addSlideMenuButton()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +37,7 @@ class ViewController: UIViewController, UITextViewDelegate{
 
     @IBAction func speak_about(_ sender: Any) {
         //Prepare Speech
-        let about_text = txt_about.text
+        let about_text = lbl_about.text
         let speaker = AVSpeechUtterance(string: about_text!)
         
         //Select Speaker
@@ -43,8 +49,10 @@ class ViewController: UIViewController, UITextViewDelegate{
     }
     
     
-    func handleTap(gestureRecognizer: UIGestureRecognizer) {
-        UIApplication.shared.open(URL(string: "www.damarisjams.com")!, options: [:])
+    @IBAction func goToWebpage(_ sender: Any) {
+        let url = URL(string: "http://www.damarisjams.com")!
+        UIApplication.shared.open(url)
     }
+    
 }
 
